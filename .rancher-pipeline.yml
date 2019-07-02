@@ -1,0 +1,23 @@
+stages:
+- name: build
+  steps:
+  - runScriptConfig:
+      image: golang:1.11
+      shellScript: |-
+        mkdir -p /go/src
+        ln -s `pwd` /go/src/pipeline-test-demo
+        cd /go/src/pipeline-test-demo
+        go build -o pipeline-test-demo main.go
+- name: publish
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: pipeline-test-demo
+      pushRemote: true
+      registry: dev.rancher.com:31117
+      pushFilePath: lingwei
+    env:
+      PLUGIN_DEBUG: "true"
+timeout: 60
+notification: {}
