@@ -8,7 +8,6 @@ stages:
         ln -s `pwd` /go/src/pipeline-test-demo
         cd /go/src/pipeline-test-demo
         go build -o pipeline-test-demo main.go
-        cat
 - name: publish
   steps:
   - publishImageConfig:
