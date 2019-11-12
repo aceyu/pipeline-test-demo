@@ -16,7 +16,7 @@ stages:
       buildContext: .
       tag: pipeline-test-demo
       pushRemote: true
-      registry: 127.0.0.1:34943
+      registry: index.docker.io
       callbackScript: /callbackscript/java.sh
       callbackScriptParams: abc def
     env:
