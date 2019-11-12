@@ -1,4 +1,4 @@
-FROM centos:7
+FROM alpine
 
 RUN mkdir -p /pipeline-test-demo
 
