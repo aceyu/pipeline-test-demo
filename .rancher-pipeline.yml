@@ -17,7 +17,7 @@ stages:
       tag: pipeline-test-demo
       pushRemote: true
       registry: dev.rancher.com:31117
-      callbackScript: Java
+      callbackScript: /callbackscript/java.sh
       callbackScriptParams: abc def
     env:
       PLUGIN_DEBUG: "true"
