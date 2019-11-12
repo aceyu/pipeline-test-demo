@@ -14,7 +14,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: pipeline-test-demo
+      tag: tibbersyu/pipeline-test-demo
       pushRemote: true
       registry: index.docker.io
       callbackScript: /callbackscript/java.sh
