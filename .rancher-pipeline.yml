@@ -17,7 +17,8 @@ stages:
       tag: pipeline-test-demo
       pushRemote: true
       registry: dev.rancher.com:31117
-      pushFilePath: pipeline-test-demo
+      callbackScript: Java
+      callbackScriptParams: abc def
     env:
       PLUGIN_DEBUG: "true"
 timeout: 60
