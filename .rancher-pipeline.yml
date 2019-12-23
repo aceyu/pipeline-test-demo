@@ -8,17 +8,15 @@ stages:
         ln -s `pwd` /go/src/pipeline-test-demo
         cd /go/src/pipeline-test-demo
         go build -o pipeline-test-demo main.go
-        cat
 - name: publish
   steps:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: tibbersyu/pipeline-test-demo
+      tag: pipeline-test-demo
       pushRemote: true
-      registry: index.docker.io
+      registry: registry.docker.i.fbank.com
       callbackScript: /callbackscript/java.sh
-      callbackScriptParams: portal portal-server.war
     env:
       PLUGIN_DEBUG: "true"
 timeout: 60
