@@ -1,0 +1,8 @@
+stages:
+- name: compile
+  steps:
+  - runScriptConfig:
+      image: golang:1.11
+      shellScript: echo 1
+timeout: 60
+notification: {}
