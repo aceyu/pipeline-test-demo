@@ -2,7 +2,7 @@ stages:
 - name: build
   steps:
   - runScriptConfig:
-      image: ${ image}
+      image: abc
       shellScript: |-
         mkdir -p /go/src
         ln -s `pwd` /go/src/pipeline-test-demo
@@ -15,7 +15,6 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: pipeline-test-demo
-      pushRemote: true
       registry: registry.docker.i.fbank.com
       callbackScript: /callbackscript/java.sh
     env:
