@@ -24,4 +24,3 @@ timeout: 60
 notification: {}
 env:
   aaa: "2"
-  ccc: "1"
